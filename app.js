@@ -1,10 +1,10 @@
-require('dotenv');
-var Pusher = require('pusher');
+require('dotenv').config();
+const Pusher = require('pusher');
 const express = require('express')
 const app = express()
 const mockData = require('./data');
 
-var pusher = new Pusher({
+const pusher = new Pusher({
   appId: process.env.PUSHER_ID,
   key: process.env.PUSHER_KEY,
   secret: process.env.PUSHER_SECRET,
@@ -16,7 +16,6 @@ setInterval(function () {
   pusher.trigger(
     'my-channel',
     'my-event',
-    // mockArr[ Math.floor( Math.random() * mockArr.length)]
     mockData.basic
   )
 }, 6000);
@@ -29,7 +28,7 @@ app.use(function(req, res, next) {
 
 app.get('/events', function (req, res) {
 console.log(req.query)
-  res.json({meow: "ME-OW"})
+  res.json({ initialEvents: [ mockData.basic ] })
 })
 
 app.listen(7000, function () {

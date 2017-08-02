@@ -4,6 +4,7 @@
   "description": "This little server was created to help develop the client side of the Monsoon Analytics App",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Augustine von Trapp",
@@ -11,6 +12,6 @@
   "dependencies": {
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
-    "pusher-js": "^4.1.0"
+    "pusher": "^1.5.1"
   }
 }

@@ -1,0 +1,15 @@
+{
+  "name": "mock-socket-server",
+  "version": "1.0.0",
+  "description": "This little server was created to help develop the client side of the Monsoon Analytics App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Augustine von Trapp",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "pusher-js": "^4.1.0"
+  }
+}

@@ -9,6 +9,7 @@
   "author": "Augustine von Trapp",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "pusher-js": "^4.1.0"
   }

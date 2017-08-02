@@ -1,12 +1,13 @@
+require('dotenv');
 var Pusher = require('pusher');
 const express = require('express')
 const app = express()
 const mockData = require('./data');
 
 var pusher = new Pusher({
-  appId: '369614',
-  key: '7355c0a07d90d62710b0',
-  secret: '890d7d2b4263de987f3c',
+  appId: process.env.PUSHER_ID,
+  key: process.env.PUSHER_KEY,
+  secret: process.env.PUSHER_SECRET,
   cluster: 'us2',
   encrypted: true
 });

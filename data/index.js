@@ -1,5 +1,7 @@
-const basic = require('./eventBasic')
+const basicEvent = require('./basicEvent');
+const basicItem = require('./basicWatchlistItem');
 
 module.exports = {
-  basic: basic,
+  basicEvent: basicEvent,
+  basicItem: basicItem,
 };

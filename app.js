@@ -1,7 +1,7 @@
 require('dotenv').config();
 const Pusher = require('pusher');
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 const mockData = require('./data');
 
 const pusher = new Pusher({
@@ -17,7 +17,7 @@ setInterval(function () {
     'my-channel',
     'my-event',
     mockData.basic
-  )
+  );
 }, 6000);
 
 app.use(function(req, res, next) {
@@ -27,10 +27,12 @@ app.use(function(req, res, next) {
 });
 
 app.get('/events', function (req, res) {
-console.log(req.query)
-  res.json({ initialEvents: [ mockData.basic ] })
+console.log(req.query);
+  const timezone = req.query.timezone;
+  const timestamp = req.query.timestamp; // for getting history;
+  res.json({ initialEvents: [ mockData.basic ] });
 })
 
 app.listen(7000, function () {
-  console.log('Example app listening on port 7000!')
+  console.log('Example app listening on port 7000!');
 })

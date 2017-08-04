@@ -31,11 +31,15 @@ app.get('/events', function (req, res) {
 console.log(req.query);
   const timezone = req.query.timezone;
   const timestamp = req.query.timestamp; // for getting history;
-  res.json({ initialEvents: [ mockData.basic ] });
+  res.json({ initialEvents: [ mockData.basicEvent ] });
 })
 
 app.get('/watchlist', function (req, res) {
   res.json({ watchlist: [ mockData.basicItem, mockData.basicItem ] });
+});
+
+app.get('/goals', function (req, res) {
+  res.json({ goals: [ mockData.basicGoal, mockData.basicGoal ] });
 });
 
 app.put('/watchlist', function (req, res) {

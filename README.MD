@@ -9,5 +9,3 @@
 * run `npm start`
 
 ###### Please contact me for env credentials or any questions.
-
-btw, I just realized that I should have mentioned that you already contributed to the design with feedback! I'll make sure to next time.
